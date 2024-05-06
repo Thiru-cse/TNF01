@@ -1,0 +1,55 @@
+Programming:
+            Machine Understandable language,
+            To give instruction to the computer,
+            Reduce human effort.
+
+console.log("Hello world");
+Task: Print your name using console.log
+
+Variable
+
+Values -> you can store different things!
+
+var           toy               =     "remote car";
+ |             |                           |
+Variable      Variable name               value
+
+Example:
+var toy = "remote car";
+console.log(toy);
+
+Task: Name
+
+var toys = "JCB";  // String
+var noOfToys = 2;  // Number
+
+Variable Types:
+1. String
+2. Number
+
+Task: Name, Age, Course Name, Mentor Name
+var name = "Thiru";
+var age = 32;
+var courseName = "FSD";
+var mentorName = "John";
+console.log(name, age, courseName, mentorName);
+
+String:
+=> length()
+=> toUpperCase(), toLowerCase()
+=> charAt()
+=> substring()
+=> split()
+=> indexOf()
+=> replace()
+=> trim()
+
+1. length - return the number of character is a string.
+Example:
+var fruits = "watermelon";
+console.log(fruits.length);
+
+"Apple" -> word
+"Apple is a fruit" -> sentence
+
+Task: jack fruit

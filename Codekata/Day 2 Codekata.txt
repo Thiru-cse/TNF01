@@ -1,0 +1,50 @@
+Codekata - Day 2
+
+2. toUpperCase() & toLowerCase: convert a string to uppercase.
+Example:
+var name = "thiru";
+console.log(name.toUpperCase());
+
+Task: "FULLSTACK DEVELOPER" change to lowercase.
+
+3. charAt(): return the character as a specified index of a string.
+
+Example:
+       "T r a i n" -> position
+        0 1 2 3 4
+
+var toy = "train";
+console.log(toy.charAt(0));
+
+4. substring(): extract a position of a string between two specified index(position).
+
+Example:
+var toy = "train";
+console.log(toy.substring(1,5));
+
+5. Split(): split is a string into an array of substring based on specified separator.
+
+* Array - []
+var name = "vijay";
+var profession = "actor";
+var age = 50;
+
+var person = ["vijay", "actor", 50];
+
+Example:
+var myString = "Hello,world,i am superman,and a spiderman";
+var myArray = myString.split(",");
+console.log(myArray);
+
+6. indexOf(): returns the index of first occurence of a special value in a string.
+
+Example:
+var myString = "common";
+console.log(myString.indexOf("o"));
+
+7. replace(): replace a specified value with a new value.
+
+Example:
+var myString = "Nume";
+console.log(myString.replace("u","a"));
+    

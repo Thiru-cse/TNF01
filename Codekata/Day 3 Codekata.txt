@@ -1,0 +1,113 @@
+8. trim(): removes whitespace from both end of a string.
+
+Example:
+var arr = "   Hello   ";
+console.log(arr.trim());
+
+Boolean: True/False
+
+Example:
+var age = 17;
+console.log(age>=18);
+
+if:
+Syntax:
+       if(condition){
+        //code to be executed if condition is true
+       } else{
+        // code to be executed if condition is false
+       }
+
+Example:
+var a = 2;
+
+if(a % 2 == 0){
+    console.log("Even");
+} else {
+    console.log("Odd");
+}
+
+Task: Voter ID - 18 -> Eligible to vote / Not Eligible to vote (if,else)
+
+Screenshot: Windows + PrtScr
+
+==  - only check values
+=== - both value and type
+
+Example:
+
+var a = 0;              // Number
+var b = "0";           // String
+console.log(a===b);
+
+Else if:
+
+Example:
+var age = 27;
+
+if(age<25){
+    console.log("Jolly Person!");
+} else if(age==25){
+    console.log("Life is started!");
+} else {
+    console.log("All the best!");
+}
+
+Task: 
+below 18 - go to school
+above 18 - go to college
+above 24 - go to work
+
+Switch Case: It basically act like a switch board.
+
+Syntax:
+      switch(variable to be checked){
+        case value1 :
+        // code to be executed when variable to be checked matches
+        break;
+        case value2 :
+        // code to be executed when variable to be checked matches
+        break;
+        default:
+      }
+
+Example:
+
+var category = "kids";
+switch(category){
+    case "kids":
+        console.log("Go to play");
+        break;
+        
+        case "men":
+            console.log("Go to Heaven");
+            break;
+            
+            case "women":
+                console.log("Go to world");
+                break;
+                
+                default:
+                console.log("You are a alien!")
+}
+
+Task: Tv, light, fan - Fan is ON (switch case)
+
+var switchBoard = "Tv";
+
+switch(switchBoard){
+    case "Tv":
+        console.log("TV is ON");
+        break;
+        
+        case "Light":
+            console.log("Light is ON");
+            break;
+            
+            case "Fan":
+                console.log("Fan is ON");
+                break;
+                
+                default:
+                console.log("Everything is OFF");
+}

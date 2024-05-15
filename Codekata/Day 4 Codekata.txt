@@ -1,0 +1,86 @@
+For loop: set of instruction that you follow over and over again until you are done.
+
+Syntax:
+       for(initialization; condition; updating;){
+        // Code 
+       }
+
+Example:
+for(let i=1; i<=10; i++){
+    console.log(i);
+}
+
+Example:
+var toys = ["ball", "car", "train", "Doll"];
+
+for(var i=0; i<toys.length; i++){
+    console.log(toys[i]);
+}
+
+Task:
+Sample Output:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+Task: student = ["name", "course", "education", "gender"];
+
+While loop: following set of instruction until a certain condition met.
+
+Syntax:
+       while(condition){
+        // body along with statement terminating at same point
+       }
+
+Example:
+var batteryLevel = 5;
+console.log("Game Starts");
+
+while(batteryLevel > 0){
+    console.log("Playing with remote control car!");
+    batteryLevel--;
+}
+
+console.log("Battery is Empty, Game End!");
+
+Task: BatteryLevel - 10
+
+Array: it can hold many items, each item has it own number,
+       add new item, remove item, it can be changed.
+
+Array Methods:
+
+1.Push(): this method add one or more element to end of an array.
+
+Example:
+var fruit = ["mango","apple"];
+fruit.push("orange");
+console.log(fruit);
+
+2.Pop(): this method remove the last element from an array.
+
+Example:
+var fruit = ["mango","apple","orange"];
+fruit.pop();
+console.log(fruit);
+
+3.Unshift(): this method add one or more element to the begining of an array.
+
+Example:
+var fruit = ["mango","apple","orange"];
+fruit.unshift("banana");
+console.log(fruit);
+
+4.shift(): this method remove the first element of an array.
+
+Example:
+var fruit = ["mango","apple","orange"];
+fruit.shift();
+console.log(fruit);

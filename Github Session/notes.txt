@@ -1,0 +1,21 @@
+Github Session
+
+- Create Account for Github
+- Create a new repository
+- Create a new file(txt)
+- Edit this file
+- Change repository visibility
+- Delete repository
+
+Step 1: Drag and Drop..✅
+- uploading an existing file
+
+Step 2: Git Terminal(version control)..✅
+- Download git(https://git-scm.com/download/win)
+- installation
+- git clone
+- create new folder and file 
+- push to github using git.
+
+Step 3: Source Control
+

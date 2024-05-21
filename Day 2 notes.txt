@@ -1,0 +1,50 @@
+HTTP Methods:
+
+GET - retrieve(fetch data from the server)
+
+POST - create(send data to the server, create a new data)
+
+PUT - Update
+
+Delete - Delete
+
+HTTP Return Codes:
+100 - 199 => Information Response
+200 - 299 => Success
+300 - 399 => Redirection
+400 - 499 => Client Error
+500 - 599 => Server Error
+
+Data Types:
+
+1. Primitive Data Types:
+- String   => var name = "john";
+- Number   => var age = 32;
+- Boolean  => true/false
+- Undefined => var a;
+               console.log(a);
+
+2. Non-Primitive Data Types:
+- Array  => var person = ["john", 32]
+- Object => var person = {name: "john", age: 32}
+
+Copy by value: it is applicable to the Primitive data Types.
+
+Example:
+var x = 7;
+var y = x;  // y holds a copy of the value 7
+y = 20;     // changing y doesn't affect x
+
+console.log(x);
+console.log(y);
+
+Copy by reference: it is applicable to the complex data types(Non-Primitive).
+
+Example:
+var arr = { name: "john"};
+var res = arr;
+
+res.name = "doe";   // changing res affect arr
+
+console.log(arr.name);
+console.log(res.name);

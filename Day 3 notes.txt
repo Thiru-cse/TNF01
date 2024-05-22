@@ -1,0 +1,153 @@
+Day - 3
+
+Array:
+- array name is the starting address of the array.
+
+Object:
+- Object are a structure of Key:Value Pair
+- Object name is also called as the reference name.
+- Object don't have index.
+
+Syntax: var ObjName = { key: "value"};
+
+Example:
+var person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    course: "FSD"
+}
+
+DOT Method (.):
+- Accessing the elements inside the object.
+- we can access the element of the object using keyname
+Syntax: ObjName.keyName
+Task: Print New York
+Example: console.log(person.city);
+
+2nd Method: Box Method
+Syntax: ObjName["keyName"];
+Example: console.log(person["course"]);
+
+For-in loop:
+- Applicable in looping
+- Printing the Object
+- it is Applicable only for object. 
+Syntax: for(var key in ObjName){Statement to be executed;}
+Example:
+var person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    course: "FSD"
+}
+
+for(var a in person){
+    console.log(a, person[a]);
+}
+
+Insertion:
+- Here a new K:V Pair will be added at end of the line
+- Syntax: ObjName.keyName = value;
+Example:
+person.gender = "male";
+console.log(person);
+
+Updation:
+- it will be Applicable for the key which is already present.
+- Syntax: ObjName.keyName = value;
+Example:
+person.city = "chennai";
+console.log(person);
+
+Delete:
+- Syntax: delete ObjName.keyName;
+Example:
+delete person.course;
+console.log(person);
+
+Function:
+- Function is a block of code designed to perform particular task.
+Example:
+// func Name(parameter) 
+function add(a, b){
+    return a+b;
+}
+
+console.log(add(44, 56));
+// func Name call(argument)
+
+Task: Multiply
+
+JSON: Javascript Object Notation
+- it look similar to an object, but not then object.
+- conversion from xml to json was difficult.
+- Advantages: converting into an array, object, string etc is easy.
+
+API: Application Programming Interface
+
+var arr = {
+    "name": "John",
+    "course": "FSD",
+    "gender": "male"
+}
+
+XML HTTP Request: it is used to interact with servers via API.
+Why: to get the data from the server via API.
+
+Example:
+- HTML CODE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Day 3 - Array and Object</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+
+- SCRIPT
+
+// Step 01: Create a XHR Object
+// var variableName = user defined your choice
+var request = new XMLHttpRequest();
+// Step 02: Specify the API
+request.open("GET", "https://restcountries.com/v2/all");
+// Step 03: Sending the Request
+request.send();
+// Step 04: Once requested data is there in server once data is successfully loaded
+// Server response will be of 200 status code
+request.onload = function() {
+    var result = JSON.parse(request.response);
+    console.log(result);
+    // Whatever conversion has to be done here only
+    // not outside
+}
+
+// inside the function: we are converting the data from server to client
+// which is in string - object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

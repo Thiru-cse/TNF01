@@ -1,0 +1,114 @@
+Day 4 - JS Functions
+
+Functions:
+- to perform a particular task
+- to avoid repetation of code
+- return: to get the value outside of the function.
+- inside function paranthesis is called function parameter.
+
+Example:
+function ex(a){
+    console.log(a);
+}
+
+ex(2);
+
+Function type:
+
+1.Anonymous Function: 
+- Function without name, often used as argument to other function.
+- use case: mostly for if any events
+Syntax: var funName = function(){return}
+
+Example:
+var add = function(a, b){
+    return a+b;
+}
+console.log(add(3,2));
+
+2.Arrow Function:
+- Introduced in ES6 Version.
+- To reduce the code length
+Syntax: var variableName = (parameter) => {code}
+
+Example:
+var multi = (a,b) => { return a*b};
+console.log(multi(2,4));
+
+3. Immediately Invoked Function Execution(IIFE):
+- Immediately delete the values after using because it has
+- limited memory space.
+Syntax: (function funName(parameter){code})(argument);
+
+Example:
+(function add(a,b){
+    console.log(a+b);
+})(7,8);
+
+Scope:
+1. Global Scope
+2. Function Scope
+3. Block Scope
+
+1.Global Scope:
+- Global scope is the scope that is outside of any function.
+Example:
+var a = "i'm global";
+
+function hello(){
+    console.log(a); 
+}
+
+hello();
+console.log(a);
+
+2.Functional Scope:
+- Functional scope is the scope that is inside of a function.
+Example:
+function funScope(){
+    var func = "Hello";
+    console.log(func);
+}
+
+funScope();
+console.log(func);
+3. Block Scope:
+- Block scope is the scope that is inside of a block of code.
+Example:
+{
+    let a = "Hello";
+    const b = "Welcome"
+    console.log(a);
+    console.log(b);
+}
+
+console.log(a);
+
+Closures:
+- A closure is a function that is defined inside of another function.
+Example:
+function closure(){
+    let add = 0;
+
+    return function(){
+        add++;
+        console.log(add);
+    }
+}
+
+const hello = closure();
+hello(); // O/P: 1
+hello(); // O/P: 2
+
+Hoisting:
+- Hoisting is the process of moving a variable or function to the top of the scope.
+
+1. Function Hoisting:
+- Function declarations are fully hoisted, 
+- meaning both the function name and the body are moved to the top of their scope.
+
+2. Variable Hoisting:
+Example:
+console.log(a);
+var a = "Hello";
+console.log(a);

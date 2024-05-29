@@ -1,0 +1,94 @@
+Day 7 -MRF
+Map, Reduce, Filter
+
+var arr = [12,13,14,15];
+var res = [24,26,28,30];
+
+Step 1: for loop
+Step 2: arr[i]*2
+Step 3: declare an empty and push
+Step 4: return res
+
+1. Map Method
+- it will take function as a parameter
+- it is applicable only for arrays
+- it will be applied each and every element of an array.
+- it will return the new array.
+
+Syntax: arr.map(function name);
+
+Example:
+var arr = [12,13,14,15];
+var res = arr.map((ele)=>ele*2);
+console.log(res);
+
+Task:
+var arr = [{name: "john", age: 32},{name: "doe", age: 28}];
+
+increase: age +5
+Hint: Map, DOT method
+
+var arr = [{name: "john", age: 32},
+{name: "doe", age: 28}];
+
+var res = arr.map((ele)=>ele.age + 5);
+console.log(res);
+
+2. Filter:
+
+var arr = [1,2,3,4,5]
+var res = [2,4]
+
+Step 1: for loop
+Step 2: if condition arr[i]%2==0
+Step 3: declare an empty and push
+Step 4: return res
+
+- Filter takes function as a parameter.
+- it is applicable to the array.
+- it will be applied on each and every element of an array.
+- if a certain condition in the function is passed, then it will be pushed.
+- or it be ignored.
+- it also return the array.
+
+Example:
+var arr = [1,2,3,4,5];
+var res = arr.filter((ele)=>ele%2==0);
+console.log(res);
+
+Task:
+var arr = [{name: "john", mark:35},{name:"doe", mark: 45},{name:"ravi", mark:55}];
+
+mark greater than 50 = person name
+Hint: Filter, Map
+
+var arr = [{name: "john", mark:35},{name:"doe", mark: 45},{name:"ravi", mark:55},{name:"log", mark:65}];
+
+var res = arr.filter((ele)=>ele.mark>=50);
+console.log(res);
+var result = res.map((ele)=>ele.name);
+console.log(result);
+
+3. Reduce
+- Reduce function takes the function as a parameter
+- it apply function on each and every element of the array.
+- it will return a single element.
+- it will take sum of whole array.
+
+var arr = [12,13,14,15];
+
+1st Case:
+acc: accumulator it refers initial value
+ele: element it refers to element array.
+
+Example:
+var arr = [12,13,14,15];
+var res = arr.reduce((acc,ele)=> acc+ele);
+console.log(res);
+
+2nd Case: when initial value are given 0.
+
+Example:
+var arr = [12,13,14,15];
+var res = arr.reduce((acc,ele)=> acc+ele, 0);
+console.log(res);

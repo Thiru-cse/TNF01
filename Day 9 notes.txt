@@ -1,0 +1,114 @@
+Day 9 - CSS
+
+CSS - Cascading Style Sheet
+Why: to add customized to the website
+
+Inline CSS:
+Example:
+<h3 style="color: green;">Reputed Edtech platform for Vernacular Languages</h3>
+style: attribute
+color: property
+green: value
+
+Internal CSS:
+<style>
+    p{
+        color: red;
+    }
+</style>
+
+External CSS:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - HTML</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+<h3>Reputed Edtech platform for Vernacular Languages</h3>
+</body>
+</html>
+
+HTML5: Sematic Tags
+Header, Nav, Main, Section, Article, Aside, Footer.
+
+Block Element:
+div, p, h1, ul, ol
+
+Inline Element:
+span, a, strong
+
+Span:
+Example:
+ <h3>Reputed Edtech platform for<br> <span style="color: green;">Vernacular Languages</span></h3>
+
+Task:
+    Header - Resume Title
+    Main - Your Name
+    Section - School, College
+    Article - tell me about yourself
+    Footer - contact, Github, linkedIn, Mail.
+
+Important:
+Example:
+h3{
+    color: brown !important;
+}
+
+Selector:
+class - .className
+id - #idName
+tag - tag(h2)
+
+Example:
+<h3 class="main">Reputed Edtech platform for Vernacular Languages</h3>
+<p id="container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, debitis!</p>
+<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+
+.main{
+    background-color: blueviolet;
+}
+
+#container{
+    background-color: aquamarine;
+}
+
+span{
+    background-color: brown;
+}
+
+Box Model:
+it is a box that wrapped around an every HTML element.
+it is consist of
+Margin, Padding, Border.
+
+Example:
+ margin-top: 50px;
+ margin-left: 50px;
+
+to avoid above scenario we use short hand notation
+all the side we can write it in single line,
+margin apply values in clockwise side.
+
+Example:
+margin: 20px 30px 40px  50px;
+        top  ryt   btm  lft
+
+Example:
+.main{
+    border: 1px dashed black;
+    height: 150px;
+    background-color: antiquewhite;
+    margin: 70px;
+    padding: 10px;
+    width: 280px;
+}
+
+Position Properties:
+need: even though if you have top, left, bottom and right
+      which can be used to place/align the element in the web page.
+
+Task: Resume

@@ -1,0 +1,109 @@
+Day 11 - Flex & Grid
+
+Flex Box:
+- Flexible Box
+- One dimensional layout Model.
+
+Flex Container Property:
+flex, flex-direction, flex-wrap, row-gap, column-gap,
+justify-content, align-items, align-content.
+
+Flex Item Property:
+Order, flex-grow, flex-basis, align-self.
+
+Example:
+<div class="container">
+    <div class="item box-1">1</div>
+    <div class="item box-2">2</div>
+    <div class="item box-3">3</div>
+    <div class="item box-4">4</div>
+    <div class="item box-5">5</div>
+    <div class="item box-6">6</div>
+    <div class="item box-7">7</div>
+    <div class="item box-8">8</div>
+</div>
+
+.box-1{background-color: blue;}
+.box-2{background-color: rebeccapurple;}
+.box-3{background-color: yellow;}
+.box-4{background-color: red;}
+.box-5{background-color: olivedrab;}
+.box-6{background-color: orange;}
+.box-7{background-color: greenyellow;}
+.box-8{background-color: brown;}
+
+.container{
+    border: 2px solid black;
+}
+
+.item{
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start; -> main axis X
+    align-items: flex-start;     -> cross axis Y
+    align-content: flex-start;   -> cross axis Y
+    align-self: flex-start;      -> cross axis Y
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+Task: https://flexboxfroggy.com/
+
+Grid:
+
+Container Property:
+display, grid-template-columns, grid-template-rows, grid-template, column-gap, row-gap, gap,
+justify-items, align-items, place-items, justify-content, align-content, place-content,
+gride-auto-columns, grid-auto-rows, grid-auto-flow.
+
+Item Property:
+grid-column-start, grid-column-end, grid-column,
+grid-row-start, grid-row-end, grid-row,
+justify-self, align-self, place-self.
+
+.container{
+    display: grid;
+    height: 800px;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+                         row           column
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: end; -> Horizontal
+    align-items: center; -> Vertical
+    place-items: center end;
+                 align  justify
+    justify-content: space-between; -> Horizontal
+    align-content: end; -> Vertical
+    place-content: start end;
+                   verti Horizontal
+     grid-auto-flow: column;
+     grid-auto-columns: 100px;
+}
+
+
+
+.box-1{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-column: 1 / span 3;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    grid-row: 1 / span 3;
+    justify-self: center; -> Horizontal
+    align-self: end; -> Vertical
+    place-self: start center;
+                align Horizontal
+}
+
+Task: https://cssgridgarden.com/
+

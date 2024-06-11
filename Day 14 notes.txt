@@ -1,0 +1,126 @@
+Day 14 - DOM
+
+- document.getElementById
+this method is applicable if you have id attribute in HTML Element.
+this Element must be in HTML File
+Extract here in JS
+it returns the HTML Element
+
+Example:
+var element = document.getElementById("container");
+console.log(element);
+
+- document.getElementByClassName
+this method is applicable if you have class attribute in HTML Element.
+the output of the method is an array.
+
+Example:
+var element = document.getElementsByClassName("main");
+console.log(element);
+
+- document.getElementsByTagName
+this is method is applicable if you have tag selector.
+output also will be an array
+
+Example:
+var element = document.getElementsByTagName("h1");
+console.log(element);
+
+- document.querySelector
+i need to extract first occurrence of the HTML.
+will select the first occurrence of the HTML.
+it will return the HTML Element
+
+Example:
+var element = document.querySelector("h1");
+console.log(element);
+
+- document.querySelectorAll
+i need to extract the first occurrence of the HTML
+will select the all the occurrence of the HTML.
+it will returns the output in terms of an array.
+
+Example:
+var element = document.querySelectorAll("h1");
+console.log(element);
+
+Task:
+label, input, button.
+TNF01@gmail.com - valid user - invalid user.
+
+ <label for="email">Enter your Email</label><br>
+ <input type="email" id="email"><br>
+ <button type="button" onclick="valid()">Submit</button>
+
+ function valid(){
+    // TNF01@gmail.com - valid user - invalid user
+    var res = document.getElementById("email").value;
+    if(res == "TNF01@gmail.com"){
+        console.log("Valid User");
+    }else{
+        console.log("Invalid User!");
+    }
+}
+
+- AddEventListener:
+addEventListener
+it takes 2 parameter
+First is the event name
+Second is func that has be executed
+
+var button = document.createElement("button");
+button.setAttribute("type","button");
+button.innerText = "Submit";
+document.body.append(button);
+
+button.addEventListener("click",verify);
+
+function verify(){
+    alert("Red Alert for Chennai!");
+}
+
+- Prompt:
+var button = document.createElement("button");
+button.setAttribute("type","button");
+button.innerText = "Submit";
+document.body.append(button);
+
+//addEventListener
+// it takes 2 parameter
+// First is the event name
+// Second is func that has be executed
+button.addEventListener("click",verify);
+
+function verify(){
+    var res = prompt("Enter your Name");
+    var mul = res * 2;
+    console.log(mul);
+}
+
+// Task: Addition + 5
+
+- MouseOver
+var div = document.createElement("div");
+div.innerText = "Click";
+document.body.append(div);
+
+div.addEventListener("mouseover", ()=> div.style.backgroundColor="red");
+
+// Task: Text Color - Pink
+
+- Confirm
+this is used for yes or no
+if yes means it return true
+if no means it return false
+
+var button = document.createElement("button");
+button.setAttribute("type", "button");
+button.innerText = "Confirm";
+document.body.append(button);
+
+button.addEventListener("click", dabba);
+
+function dabba(){
+    var res = confirm("Hey King you dropped this...👑");
+    console.log(res);
+}

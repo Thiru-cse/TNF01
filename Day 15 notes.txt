@@ -1,0 +1,28 @@
+- Gradients: it helps us to have the transition linear and radial Gradient.
+             linear Gradient will have default flow of top to bottom.
+             radial gradient will have the circle inside the box.
+
+Syntax:
+background-image: linear-gradient(direction/angle, starting color...ending color);
+
+Example:
+ <style>
+        .main{
+            height: 200px;
+            background-image: linear-gradient(to right, red, yellow, orange);
+        }
+    </style>
+
+<div class="main"></div>
+
+Task: radial gradient
+
+Code Pen(online Editor): https://codepen.io/pen/
+
+Gradient Generator: https://cssgradient.io/
+
+Flex Generator: https://www.flexer.dev/
+
+Grid Generator: https://cssgrid-generator.netlify.app/
+
+Box Shadow Generator: https://www.cssmatic.com/box-shadow

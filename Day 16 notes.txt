@@ -1,0 +1,96 @@
+Day 16 - Async
+
+setTimeout(): This method execute a func, after waiting specific number of millisecond.
+
+Syntax:
+setTimeout(func, millisecond);
+
+Example:
+<h1>SetTimeOut</h1>
+        <button onclick="setTimeout(timeOut, 5000)">Submit</button>
+        
+    <script>
+        function timeOut(){
+            console.log("Hello world!");
+        }
+    </script>
+
+setInterval(): This method repeat a given func at every given time interval.
+
+Syntax:
+setInterval(func, millisecond);
+
+Example:
+      <h1>SetInterval</h1>
+        <button onclick="setInterval(timeOut, 5000)">Submit</button>
+        
+    <script>
+        function timeOut(){
+            console.log("Hello world!");
+        }
+    </script>
+
+Task: Every 3sec create new H1(Hello) tag UI.
+
+Example:
+      <h1>SetInterval</h1>
+        <button onclick="setInterval(timeOut, 3000)">Submit</button>
+        
+    <script>
+        function timeOut(){
+            var heading = document.createElement("h1");
+            heading.innerText = "hello";
+            document.body.append(heading);
+        }
+    </script>
+
+Call back: it is a func which uses one more func as parameter.(map)
+
+Javascript: Single threated execute Single task at the time.
+
+Synchronous: which execute all the code line by line.
+
+Asynchronous: programming you can do task without waiting for a task to complete its execution.
+
+Cooking: Synchronous(line by line)
+        Step 1: Cook cake
+        Step 2: Mix all incredients
+        Step 3: Microwave 30mins
+        Step 4: Eat Cake.
+        Step 5: Juice
+
+Cooking: Asynchronous(no need to wait)
+        Step 1: Cook cake
+        Step 2: Mix all incredients
+        Step 3: Microwave 30mins
+        Step 4: Juice
+        Step 5: Eat Cake.
+
+Example:
+
+console.log("Started");
+
+setTimeout(function timer(){
+    console.log("2secs Delay");
+},2000);
+
+console.log("Middle");
+
+setTimeout(function timer(){
+    console.log("5secs Delay");
+},5000);
+
+console.log("Completed!");
+
+1. CallStack: it is place in browser where it keep track the function that has to be called in a diagram.
+              it will executed whatever the statement inside.
+
+2. Web API: it is place where to the Async operation are actually executed.
+
+3. Event Queue: Queue is data structure First Come First Out(FIFO).
+                it stores the Async function which has to be executed next.
+
+4. Event Loop: it is between call stack as well as the event Queue.
+               the main role of the event loop is check whether the call stack is empty or not.
+               if it is empty it will push the code from Queue and it to call stack.
+               the call stack execute the function.

@@ -1,0 +1,140 @@
+Day 17 - Promise
+
+- Callback Example:
+
+function add(a,b){
+    return a + b;
+}
+
+function divide(a,b){
+    return a / b;
+}
+
+function cal(x,y,cb){
+    return cb(x,y);
+}
+
+console.log(cal(2,2, add));
+
+- Callback Hell Example:
+
+function a1(){
+    function a2(){
+        function a3(){
+            console.log("This is CB");
+        }
+    }
+}
+
+Promise: it holds the result of Async operation.
+Need of Promise: to overcome Callback Hell scenerio.
+it is an object, which holds result of Async operation.
+
+Syntax:
+var variableName = new Promise((resolve, reject));
+
+For every Promise object we have state,
+1. Pending
+2. Fulfilled(resolve)
+3. Reject.
+
+Example:
+var a = new Promise((resolve, reject)=>{
+    if(5>0){
+        resolve("Resolved");
+    } else {
+        reject("Rejected");
+    }
+})
+
+console.log(a);
+
+Task: 18 you are eligible to vote / 17 not eligible to vote -----> Prompt, Promise
+
+Example:
+var age = prompt("Enter your Age!")
+var a = new Promise((resolve, reject)=>{
+    if(age>=18){
+        resolve("You are Eligible to vote")
+    } else {
+        reject("Sorry Kid! You are not eligible to vote")
+    }
+})
+
+// console.log(a);
+a.then((data)=>console.log(data)).catch((error)=>console.log(error));
+
+Example:
+// if function return promise
+// if both resolve and reject  is given it depend on Order
+function find(num){
+    return new Promise((resolve, reject)=>{
+        resolve("This is resolve");
+        reject("This is reject");
+    })
+}
+
+find(5).then((data)=>console.log(data)).catch((err)=>console.log(err));
+
+- Chaining of Promise
+// Dependent Operation
+// the result of first will be served as input to second.
+
+function chain(num){
+    return new Promise((resolve,reject)=>setTimeout(()=> resolve(num*2),2000))};
+
+chain(5).then((data)=>{
+    console.log(data)
+    return chain(data);
+}).then((data1)=>{
+    console.log(data1);
+    return chain(data1)
+}).then((data2)=>console.log(data2));
+
+- Promise.all()
+// when you have multiple promise
+// it will wait until all the promise are getting resolved
+// and then it returns an array of value.
+
+var p1 = new Promise((resolve, reject)=>{
+    if(true){
+        setTimeout(()=>resolve("P1 is resolved!"), 3000);
+    } else{
+        setTimeout(()=>reject("P1 is reject"),4000);
+    }
+})
+
+var p2 = new Promise((resolve, reject)=>{
+    if(true){
+        setTimeout(()=>resolve("P2 is resolved!"), 2000);
+    } else{
+        setTimeout(()=>reject("P2 is reject"),4000);
+    }
+})
+
+var p3 = new Promise((resolve, reject)=>{
+    if(true){
+        setTimeout(()=>resolve("P3 is resolved!"), 4000);
+    } else{
+        setTimeout(()=>reject("P3 is reject"),4000);
+    }
+})
+
+Promise.all([p1, p2, p3]).then((data)=>console.log(data)).catch((err)=>console.log(err))
+
+- Fetch
+it is alternative to XHR
+Fetch takes API as a parameter
+Syntax: fetch("API LINK");
+Return type is promise
+the body section in the fetch is a readable stream
+to convert readable stream to object (JSON) we need to .json method
+Remember: always need a .then and .catch to handle promise.
+
+Example:
+var res = fetch("https://restcountries.com/v3.1/all");
+res.then((data)=> data.json()).then((data1)=>{
+    console.log(data1);
+})
+
+Task: Print the Country Name.

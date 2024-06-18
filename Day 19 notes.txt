@@ -1,0 +1,86 @@
+Day 19 - Async/Await
+
+Task:
+
+https://data.covid19india.org/v4/min/data.min.json
+Printed Confirmed Cases
+Use Fetch and For-in.
+
+Example:
+
+var res = fetch("https://data.covid19india.org/v4/min/data.min.json");
+res.then((data)=>data.json()).then((data1)=>{
+    // console.log(data1);
+    for(var i in data1){
+        // console.log(i, data1[i].total.confirmed);
+        var div = document.createElement("div");
+        div.innerHTML = `<p>${i}</p>
+                        <p>${data1[i].total.confirmed}</p>`
+        document.body.append(div);
+    }
+})
+
+Task: Covid19(https://www.covid19india.org/)
+
+Async function always return a promise.
+to handle promise we have await keyword.
+await is used to inside the Async Func.
+await help us to wait until the promise get resolved.
+await replacement for the .then.
+
+Example:
+async function rest(){
+    var res = await fetch("https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+    var result = await res.json();
+    console.log(result);
+}
+
+rest();
+
+Error Handling:
+
+Syntax:
+try{
+
+}catch{
+
+}
+
+try: testing block
+catch: Error Handling block
+
+Example:
+function war(){
+    return new Promise((resolve,reject)=>reject("This is reject"));
+}
+
+async function foo(){
+    try{
+        var res = await fetch("https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+        var result = await res.json();
+        console.log(result);
+        var res2 = await war();
+        console.log(res2);
+    }catch (err){
+        console.log(err);
+    }
+} 
+
+foo();
+
+- Await Chaining
+
+function war(num){
+return new Promise((resolve,reject)=>{
+    setTimeout(()=> resolve(2*num), 3000);
+})    
+}
+
+async function foo(){
+    var v1 = await war(2);
+    console.log(v1); //4
+    var v2 = await war(v1);
+    console.log(v2); //8
+}
+
+foo();

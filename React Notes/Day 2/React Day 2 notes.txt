@@ -1,0 +1,90 @@
+React- Day -2: React
+
+Why react:
+	React is a popular open-source JavaScript library for building user interfaces (UIs) and user interface components. It was developed by Facebook and is widely used for creating dynamic and interactive web applications, particularly for single-page applications.
+
+React allows developers to build reusable UI components and manage the state of a web application efficiently.
+Key features and concepts of React include:
+1.     Component-Based Architecture
+2.     Virtual DOM
+3.     One-Way Data Flow
+4.     JSX (JavaScript XML)
+5.     Component Lifecycle
+6.     State Management
+7.     Reusable Components
+8.     React Router
+Library vs Framework Explanation : 
+	
+Library:
+A library is a collection of pre-written code and functionalities that you can use in your own projects to solve specific problems. 
+Eg: axios
+
+Framework:
+	When using a framework, you build your application within its predefined structure. This can streamline development but might limit flexibility compared to libraries.
+
+Virtual DOM : (Copy of actual/real DOM)
+	The Virtual DOM (Document Object Model) is a concept associated with libraries like React.js. It is a programming concept where an ideal or "virtual" representation of the user interface is kept in memory and synced with the "real" DOM by a library, such as React. 
+	Reconciliation:
+React then compares the new virtual DOM tree with the previous one, determining the differences or "diffs" between them.
+This process is known as reconciliation, and it's where React identifies what parts of the virtual DOM have changed.
+The Virtual DOM helps improve performance by minimizing direct manipulation of the real DOM.
+
+
+Setup react project:
+	What is vite?
+Vite is a build tool and development server that is designed to enhance the development experience for modern web applications. It's especially optimized for building front-end applications using frameworks like Vue.js and React. 
+Steps: setup React
+Step 1: Install Node.js and npm
+Before you start, make sure you have Node.js and npm (Node Package Manager) installed on your system. You can download and install them from the official Node.js website: https://nodejs.org/
+Reference Video:
+      	https://youtu.be/He5icjiUZNw
+      	(till 3.50 its enough for nodejs install)
+      	Vite + React  app commands
+PS D:\React\day1> npm create vite@latest myday1project
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+Done.
+Now run:
+  cd myday1project
+  npm install
+  npm run dev
+ 
+PS D:\React\day1\myday1project> npm install
+PS D:\React\day1\myday1project> npm run dev
+> myday1project@0.0.0 dev
+> vite
+  VITE v4.4.9  ready in 985 ms
+  ➜  Local:   http://localhost:5173/
+ Vite.config.js:
+
+Local:   http://localhost:3000/
+Reference Video:https://youtu.be/agpZsCUllqc
+ 
+
+Folder Structure & Components 
+     	In a React application, the folder structure and organization of components play a crucial role in maintaining a clean and scalable codebase.
+     	src/
+├── components/
+│   ├── Header/
+│   │   ├── Header.js
+│   │   ├── Header.css
+│   ├── Sidebar/
+│   │   ├── Sidebar.js
+│   │   ├── Sidebar.css
+├── pages/
+│   ├── Home/
+│   │   ├── Home.js
+│   ├── About/
+│   │   ├── About.js
+├── App.jsx
+├── main.js
+
+Understanding JSX:
+	JSX Elements: react comp return jsx
+     		JSX (JavaScript XML) is a syntax extension used in React to write UI elements in a more intuitive and readable way. JSX allows you to combine JavaScript and HTML-like syntax to create React elements.
+
+Other Titles Practical Explanation:
+Components (simple HTML layout to reusable react components)
+Understanding the components
+Passing data through props
+Deploying react to netlify

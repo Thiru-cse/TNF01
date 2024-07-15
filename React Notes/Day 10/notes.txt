@@ -1,0 +1,13 @@
+React- Day -10: Axios:
+	
+fetch() or Axios
+	fetch(): Built-in function, so you don't need to install any additional libraries.
+	It returns Promises, making it easy to work with asynchronous code.
+	compared to Axios, it is difficult to handle different HTTP methods, headers, and error handling.
+
+Axios: 
+	Additional dependency, You need to install Axios as a separate dependency.
+	Axios is a larger library compared to fetch()
+
+Implementing simple CRUD - Task-oriented programs
+

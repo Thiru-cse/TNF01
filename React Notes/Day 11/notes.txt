@@ -1,9 +1,13 @@
 React- Day -11: practice with formik & recap:
 What is Formik:
-	Formik is an open-source library for managing forms in React applications. It provides a set of utilities and components that simplify the process of building and handling forms, making it easier for developers to manage form state, validation, and submissions.
+	Formik is an open-source library for managing forms in React applications. 
+        It provides a set of utilities and components that simplify the process of building and handling forms,
+        making it easier for developers to manage form state, validation, and submissions.
 	It's a popular choice for developers building React applications that involve user input through forms.	
 useFormik().
+
 What is yup: (validation schema)
 Yup is a JavaScript library that provides a declarative way to define and validate the shape and content of JavaScript objects. It is particularly useful for validating user input, form data, or any data that needs to adhere to a specific schema.
+
 Example- 1	- simple formik implementation (Day11program)
 Example- 2         - Formik worked out to the yesterday’s axios curd operation.  

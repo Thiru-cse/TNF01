@@ -7,7 +7,8 @@ What is Formik:
 useFormik().
 
 What is yup: (validation schema)
-Yup is a JavaScript library that provides a declarative way to define and validate the shape and content of JavaScript objects. It is particularly useful for validating user input, form data, or any data that needs to adhere to a specific schema.
+Yup is a JavaScript library that provides a declarative way to define and validate the shape and content of JavaScript objects. 
+It is particularly useful for validating user input, form data, or any data that needs to adhere to a specific schema.
 
 Example- 1	- simple formik implementation (Day11program)
 Example- 2         - Formik worked out to the yesterday’s axios curd operation.  

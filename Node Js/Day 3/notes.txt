@@ -1,0 +1,7 @@
+Nodejs- Day -3: Node & mongo DB connectivity
+
+	"Connection to MongoDB(local & atlas)
+simultaneously frontend + backend connectivity"
+Mongoose:
+In Node.js, Mongoose is in fact a third-party package. It's a Node.js and MongoDB object data modelling (ODM) module. 
+It offers a simple, schema-based way to model the data in your application.

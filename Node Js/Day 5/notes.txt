@@ -1,0 +1,20 @@
+Nodejs- Day -5: Authentication
+Authentication 
+bcrypt
+simultaneously frontend + backend connectivity
+
+
+Authentication 
+		It is used for securing access to resources and ensuring that users are who they claim to be. 
+    Authentication can be implemented in various ways depending on the requirements of the application, 
+    such as using usernames and passwords, token-based, o_auth, multi_auth methods etc.
+
+Bcrypt => bcryptjs
+It is a popular password hashing library for Node.js applications. 
+It provides a secure way to hash and verify passwords, making it difficult for attackers to crack passwords 
+even if they gain access to the hashed value 
+
+3 Important Steps:
+npm install bcrypt or bcryptjs 
+bcrypt.hash(password, 10) -> salt factor 10 rounds  //register
+bcrypt.compare(userProvidedPassword, storedHashedPassword) //login

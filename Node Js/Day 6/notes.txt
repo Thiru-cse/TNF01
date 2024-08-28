@@ -1,0 +1,62 @@
+Nodejs- Day -6: JWT:
+JWT 
+Custom middleware
+Authorization
+simultaneously frontend + backend connectivity
+
+
+JWT:
+     	JWT stands for "JSON Web Token"
+JWT is commonly used for authentication and authorization purposes.
+used for securely transmitting information between client and server.
+Install:
+npm i jsonwebtoken
+ 
+jwt.sign(): Token generate
+jwt.sign(payload, secretOrPrivateKey)   //login api
+Eg:
+Const token= jwt.sign({ _id: user._id },JWT_SECRET)
+ 
+jwt.verify(): Verify generated token
+jwt.verify(token, secretOrPublicKey)    //middleware
+ 
+Eg:
+     	const decoded = jwt.verify(token, JWT_SECRET);
+
+
+Authorization:
+Authorization in Node.js is the process of determining whether a user or client has permission to perform a specific action or access particular resources. While authentication is about verifying identity, authorization is about granting access to resources based on that identity.
+
+
+Custom middleware
+ is a powerful feature in Express and Node.js, allowing you to modularize(module) your application's functionality and execute code at different stages of the request-response cycle. 
+next() is invoked, the control is passed to the next middleware or route handler in the sequence.
+
+
+NodeMailer:  npm i nodemailer 
+let mailTransporter= nodemailer.createTransport({
+        service:'gmail',
+        auth:{
+            user:"mailid ",
+            pass:"2step verification and App password generation in google account"
+        }
+    })
+ 
+    let details={
+        from:"mail id ",
+        to:"to mail id",
+        subject:"subject message",
+        text:"body message"
+    }
+ 
+    mailTransporter.sendMail(details,(err)=>{
+        if(err){
+            console.log("mail not send");
+        }else{
+            console.log("mail sent successfully");
+        }
+    }) 
+ 
+Nodemailer:
+videoref(https://youtu.be/l--0JyIS5Ts?si=7NJ3xsPQRZPJ9JnM)
+https://myaccount.google.com/apppasswords, - > if not app password  in your account , use this link.
